@@ -1,0 +1,14 @@
+[images]
+  remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*", "https://ext.same-assets.com/.*", "https://ugc.same-assets.com/.*"]
+
+[build]
+  # Directory with the built assets
+  publish = "dist"
+  # Build command to create production build
+  command = "bun run build"
+
+# This ensures React Router's client-side routing works correctly
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
